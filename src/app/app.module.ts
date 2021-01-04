@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductAlertComponent } from './product-alert/product-alert.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   imports: [
@@ -14,19 +16,21 @@ import { ProductAlertComponent } from './product-alert/product-alert.component';
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
+      { path: 'product/:productId', component: ProductDetailComponent },
+      { path: 'cart', component: CartComponent },
     ])
   ],
   declarations: [
     AppComponent,
     TopBarComponent,
     ProductListComponent,
-    ProductAlertComponent
+    ProductAlertComponent,
+    ProductDetailComponent,
+    CartComponent
   ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
-
-
 /*
 Copyright Google LLC. All Rights Reserved.
 Use of this source code is governed by an MIT-style license that

@@ -12,4 +12,8 @@ export class ProductAlertComponent implements OnInit {
   // In the component class, define a property named notify with an @Output() decorator and an instance of EventEmitter().
   // Configuring ProductAlertsComponent with an @Output() allows the ProductAlertsComponent to emit an event when the value of the notify property changes.
   @Output() notify = new EventEmitter();
+  constructor() { }
+
+  ngOnInit(): void {
+  }
 }
